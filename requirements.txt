@@ -1,3 +1,10 @@
 Django==4.1
 djangorestframework==3.13.1
 python-decouple==3.6
+gunicorn==20.1.0 
+whitenoise==6.2.0
+boto3==1.24.61 
+botocore==1.27.61 
+django-filter==22.1 
+django-storages==1.13.1 
+python-dateutil==2.8.2
