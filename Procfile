@@ -1,1 +1,1 @@
-web: gunicorn DomainExpansion.wsgi --log-file-
+web: gunicorn DomainExpansion.wsgi --log-file -
