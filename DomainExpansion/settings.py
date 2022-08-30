@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 
-from decouple import config
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +26,7 @@ SECRET_KEY = 'django-insecure-uvw$6=ap_(p392s*euvvm@mslbctiib=yx#_030rt$24h$i!lw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'domain-expansion.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'domain-expansion.herokuapp.com']
 
 
 # Application definition
