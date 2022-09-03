@@ -16,7 +16,7 @@
                   ></path>
                 </svg>
               </a>
-              <h3>Study Room</h3>
+              <h3>Back to home</h3>
             </div>
             {% if room.host ==  request.user %}
             <div class="room__topRight">
@@ -78,7 +78,9 @@
                 rerum consectetur, voluptatem repudiandae eum ea porro cupiditate provident nulla, deserunt, ab ipsum
                 corporis laboriosam deleniti molestias?
               </div> -->
+              <a href="{% url 'home' %}?q={{room.topic}}">
               <span class="room__topics">{{room.topic}}</span>
+              </a>
             </div>
             <div class="room__conversation">
               <div class="threads scroll">
