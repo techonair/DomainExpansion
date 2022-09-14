@@ -143,7 +143,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-MEDIA_ROOT = os.path.join('static/images')
+MEDIA_ROOT = os.path.join('/images')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -154,6 +154,3 @@ django_heroku.settings(locals())
 
 if os.getcwd() == '/app':
     DEBUG = True
-
-    MEDIA_URL = 'staticfiles/images/'
-    MEDIA_ROOT = os.path.join('staticfiles/images')

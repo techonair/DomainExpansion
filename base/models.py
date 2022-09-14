@@ -6,7 +6,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True, null=True)
     bio = models.TextField(null=True)
 
-    avatar = models.ImageField(null=True, blank=True, default="/avatar.svg")
+    avatar = models.ImageField(null=True, blank=True, default="static/avatar.svg")
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
@@ -19,8 +19,8 @@ class Topic(models.Model):
         return self.name
 
 class Room(models.Model):
-    host = models.ForeignKey(User , on_delete=models.SET_NULL, null=True)
-    topic = models.ForeignKey(Topic , on_delete=models.SET_NULL, null=True)
+    host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     participants = models.ManyToManyField(User, related_name='participants', blank=True)
