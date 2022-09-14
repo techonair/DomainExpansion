@@ -135,15 +135,15 @@ USE_TZ = True
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
-STATIC_URL = os.path.join(BASE_DIR, '/static/')
+STATIC_URL = '/static/'
 
-MEDIA_URL = os.path.join(BASE_DIR, '/images/')
+MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_ROOT = os.path.join('static/images')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -151,6 +151,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
-"""
+
 if os.getcwd() == '/app':
-    DEBUG = False"""
+    DEBUG = True
+    
+    MEDIA_URL = 'staticfiles/images/'
+    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
+    STATIC_URL = '/staticfiles/'
+    MEDIA_ROOT = os.path.join('staticfiles/images')
