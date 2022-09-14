@@ -154,8 +154,6 @@ django_heroku.settings(locals())
 
 if os.getcwd() == '/app':
     DEBUG = True
-    
+
     MEDIA_URL = 'staticfiles/images/'
-    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
-    STATIC_URL = '/staticfiles/'
     MEDIA_ROOT = os.path.join('staticfiles/images')
