@@ -26,6 +26,7 @@
           <a href="{% url 'user-profile' request.user.id %}">
             <div class="avatar avatar--medium active">
               <img src="{{request.user.avatar.url}}" />
+              {{request.user.avatar.url}}
             </div>
             <p>{{request.user.name}}<span>@{{request.user.username}}</span></p>
           </a>
