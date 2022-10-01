@@ -13,7 +13,7 @@
         <div class="profile">
           <div class="profile__avatar">
             <div class="avatar avatar--large active">
-              <img src="{{user.avatar.url}}" />
+              <img src="{% if user.avatar %}{{user.avatar.url}}{% endif %}" />
             </div>
           </div>
           <div class="profile__info">
